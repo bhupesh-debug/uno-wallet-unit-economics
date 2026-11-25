@@ -1,0 +1,226 @@
+{
+  "n_users": 6000,
+  "activation_rate_empirical": 0.594,
+  "blended": {
+    "cac": 18.9,
+    "activation": 0.588,
+    "ltv": 19.19,
+    "ltv_cac": 1.02,
+    "payback_months": 20.1,
+    "breakeven_retention": 0.817
+  },
+  "channels": [
+    {
+      "channel": "organic",
+      "cac": 4.0,
+      "activation": 0.68,
+      "ltv": 22.21,
+      "ltv_cac": 5.55,
+      "payback_months": 1.0,
+      "breakeven_retention": 0.0
+    },
+    {
+      "channel": "referral",
+      "cac": 8.0,
+      "activation": 0.72,
+      "ltv": 23.52,
+      "ltv_cac": 2.94,
+      "payback_months": 2.0,
+      "breakeven_retention": 0.451
+    },
+    {
+      "channel": "paid_social",
+      "cac": 38.0,
+      "activation": 0.38,
+      "ltv": 12.41,
+      "ltv_cac": 0.33,
+      "payback_months": null,
+      "breakeven_retention": 0.948
+    },
+    {
+      "channel": "paid_search",
+      "cac": 42.0,
+      "activation": 0.45,
+      "ltv": 14.7,
+      "ltv_cac": 0.35,
+      "payback_months": null,
+      "breakeven_retention": 0.944
+    },
+    {
+      "channel": "campus",
+      "cac": 18.0,
+      "activation": 0.6,
+      "ltv": 19.6,
+      "ltv_cac": 1.09,
+      "payback_months": 12.0,
+      "breakeven_retention": 0.803
+    }
+  ],
+  "empirical_ltv_per_acquired": 22.21,
+  "empirical_cac": 18.78,
+  "empirical_ltv_cac": 1.18,
+  "closed_form_ltv": 19.41,
+  "empirical_vs_closed_gap_pct": 14.4,
+  "activation_auc": 0.672,
+  "activation_baseline_auc": 0.5,
+  "activation_baseline_rate": 0.594,
+  "activation_coefficients": {
+    "intent": 1.372,
+    "channel_campus": 0.021,
+    "channel_organic": 0.429,
+    "channel_paid_search": -0.482,
+    "channel_paid_social": -0.866,
+    "channel_referral": 0.597
+  },
+  "fitted_retention": 0.884,
+  "retention_fit_rmse": 0.079,
+  "assumed_retention": 0.82,
+  "net_rev_per_active_month": 6.14,
+  "sensitivity": {
+    "base_ltv_cac": 1.02,
+    "rows": [
+      {
+        "driver": "retention",
+        "delta_pct": -5,
+        "value": 0.77,
+        "ltv_cac": 0.8,
+        "change_pct": -20.8
+      },
+      {
+        "driver": "retention",
+        "delta_pct": 5,
+        "value": 0.87,
+        "ltv_cac": 1.38,
+        "change_pct": 35.7
+      },
+      {
+        "driver": "net_rev",
+        "delta_pct": -20,
+        "value": 4.916,
+        "ltv_cac": 0.81,
+        "change_pct": -20.0
+      },
+      {
+        "driver": "net_rev",
+        "delta_pct": 20,
+        "value": 7.374,
+        "ltv_cac": 1.22,
+        "change_pct": 20.0
+      },
+      {
+        "driver": "cac",
+        "delta_pct": -20,
+        "value": 15.12,
+        "ltv_cac": 1.27,
+        "change_pct": 25.0
+      },
+      {
+        "driver": "cac",
+        "delta_pct": 20,
+        "value": 22.68,
+        "ltv_cac": 0.85,
+        "change_pct": -16.7
+      },
+      {
+        "driver": "activation",
+        "delta_pct": -20,
+        "value": 0.4704,
+        "ltv_cac": 0.81,
+        "change_pct": -20.0
+      },
+      {
+        "driver": "activation",
+        "delta_pct": 20,
+        "value": 0.7056,
+        "ltv_cac": 1.22,
+        "change_pct": 20.0
+      },
+      {
+        "driver": "discount_monthly",
+        "delta_pct": -20,
+        "value": 0.008,
+        "ltv_cac": 1.03,
+        "change_pct": 0.9
+      },
+      {
+        "driver": "discount_monthly",
+        "delta_pct": 20,
+        "value": 0.012,
+        "ltv_cac": 1.01,
+        "change_pct": -0.8
+      }
+    ],
+    "ranking": [
+      {
+        "driver": "retention",
+        "spread": 0.58
+      },
+      {
+        "driver": "cac",
+        "spread": 0.42
+      },
+      {
+        "driver": "net_rev",
+        "spread": 0.41
+      },
+      {
+        "driver": "activation",
+        "spread": 0.41
+      },
+      {
+        "driver": "discount_monthly",
+        "spread": 0.02
+      }
+    ]
+  },
+  "top_levers": [
+    {
+      "driver": "retention",
+      "ltv_cac_uplift_pct": 35.7
+    },
+    {
+      "driver": "net_rev",
+      "ltv_cac_uplift_pct": 20.0
+    },
+    {
+      "driver": "activation",
+      "ltv_cac_uplift_pct": 20.0
+    }
+  ],
+  "assumptions": {
+    "channels": {
+      "organic": {
+        "mix": 0.3,
+        "cac": 4.0,
+        "activation": 0.68
+      },
+      "referral": {
+        "mix": 0.25,
+        "cac": 8.0,
+        "activation": 0.72
+      },
+      "paid_social": {
+        "mix": 0.2,
+        "cac": 38.0,
+        "activation": 0.38
+      },
+      "paid_search": {
+        "mix": 0.15,
+        "cac": 42.0,
+        "activation": 0.45
+      },
+      "campus": {
+        "mix": 0.1,
+        "cac": 18.0,
+        "activation": 0.6
+      }
+    },
+    "base_monthly_retention": 0.82,
+    "mean_monthly_spend": 1150.0,
+    "earn_rate": 0.021,
+    "uno_take": 0.3,
+    "servicing_cost_per_active_month": 1.1,
+    "discount_monthly": 0.01,
+    "note": "ALL inputs are [ASSUMPTION]s, not Uno Wallet facts. No Uno Wallet financial data is public."
+  }
+}

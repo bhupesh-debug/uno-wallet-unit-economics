@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/processed/
+reports/charts/*.png
+models/*.pkl
+.venv/
